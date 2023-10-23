@@ -32,7 +32,9 @@ def find_closest_key(dct_keys, key, threshold=0.75):
 
 
 class GPTStructuredReporting:
-    def __init__(self, api_key: str, path_to_templates: str, model: str = "gpt-4", **kwargs):
+    def __init__(
+        self, api_key: str, path_to_templates: str, model: str = "gpt-4", **kwargs
+    ):
         self.set_api_key(api_key)
         self.model = model
         with open(path_to_templates, "r") as file:
